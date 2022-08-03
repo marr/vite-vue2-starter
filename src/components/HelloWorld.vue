@@ -14,7 +14,8 @@
       >Vue 2 Documentation</a>
     </p>
 
-    <button @click="count++">count is: {{ count }}</button>
+    <counter />
+
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -22,17 +23,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    msg: String,
-  },
-  data() {
-    return {
-      count: 0,
-    };
-  },
-};
+<script setup>
+import Counter from './Counter.vue';
+
+defineProps(['msg']);
 </script>
 
 <style scoped>
