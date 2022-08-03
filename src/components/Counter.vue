@@ -1,8 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
+import { useCount } from '~/stores/counter';
 
 // reactive state
-const count = ref(0)
+const { localCount: count } = useCount(); 
 
 // functions that mutate state and trigger updates
 function increment() {
@@ -16,5 +17,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <button @click="increment">Count is: {{ count }}</button>
+  <button @click="increment">Local count is: {{ count }}</button>
 </template>

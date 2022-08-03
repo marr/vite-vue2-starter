@@ -14,8 +14,6 @@
       >Vue 2 Documentation</a>
     </p>
 
-    <counter />
-
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -24,7 +22,6 @@
 </template>
 
 <script setup>
-import Counter from './Counter.vue';
 
 defineProps(['msg']);
 </script>

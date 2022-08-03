@@ -5,16 +5,20 @@
       src="./assets/logo.png"
     />
     <HelloWorld msg="Hello Composition API" />
+    <button @click="count++">Global count {{ count }}</button>
+    <ol style="list-style:none; padding:0">
+      <li><counter /></li>
+      <li><counter /></li>
+    </ol>
   </div>
 </template>
 
-<script>
+<script setup>
+import Counter from './components/Counter.vue';
 import HelloWorld from "./components/HelloWorld.vue";
-export default {
-  components: {
-    HelloWorld,
-  },
-};
+import { useCount } from '~/stores/counter';
+
+const { count } = useCount();
 </script>
 
 <style>
