@@ -4,7 +4,7 @@
       alt="Vue logo"
       src="./assets/logo.png"
     />
-    <HelloWorld msg="Hello Vue 2 + Vite" />
+    <HelloWorld msg="Hello Composition API" />
   </div>
 </template>
 

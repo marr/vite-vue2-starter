@@ -1,5 +1,15 @@
-const { createVuePlugin } = require('vite-plugin-vue2');
+const vue = require('@vitejs/plugin-vue2');
+import { resolve } from 'node:path';
 
 module.exports = {
-  plugins: [createVuePlugin()],
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '~': resolve('src')
+    }
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true
+  } 
 };
