@@ -9,7 +9,7 @@ module.exports = {
     }
   },
   test: {
-    environment: 'jsdom',
+    environment: 'happy-dom',
     globals: true
   } 
 };
